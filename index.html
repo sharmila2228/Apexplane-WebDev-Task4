@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sharmila | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1>👋 Hi, I'm <span>Sharmila</span></h1>
+      <p>A frontend developer passionate about clean & modern designs.</p>
+    </div>
+  </header>
+
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>I build elegant, responsive websites with JavaScript, HTML5, and CSS3. I love bringing ideas to life in the browser.</p>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+
+    <!-- To-Do List -->
+    <div class="card">
+      <h3>📝 To-Do List (Local Storage)</h3>
+      <div class="todo-container">
+        <input type="text" id="taskInput" placeholder="Add a task" />
+        <button onclick="addTask()">Add</button>
+        <ul id="taskList"></ul>
+      </div>
+    </div>
+
+    <!-- Product Filter -->
+    <div class="card">
+      <h3>🛍 Product Listing Page</h3>
+      <div class="filters">
+        <input type="text" id="searchInput" placeholder="Search products..." oninput="renderProducts()" />
+        <select id="filterCategory" onchange="renderProducts()">
+          <option value="all">All</option>
+          <option value="tech">Tech</option>
+          <option value="fashion">Fashion</option>
+        </select>
+        <select id="sortOption" onchange="renderProducts()">
+          <option value="price">Sort by Price</option>
+          <option value="rating">Sort by Rating</option>
+        </select>
+      </div>
+      <div id="productList" class="product-grid"></div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Sharmila Medabayana | </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
